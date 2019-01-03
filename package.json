@@ -1,8 +1,8 @@
 {
-  "name": "MovieDB_API",
-  "version": "1.0.0",
-  "description": "A simple todo list app built in HTML, CSS and JavaScript.",
-  "main": "index.js",
+  "name": "moviedb_api",
+  "version": "0.0.1",
+  "description": "A simple API",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/Obilarius/MovieDB_API.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Sascha Walzenbach",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Obilarius/MovieDB_API/issues"
   },
   "homepage": "https://github.com/Obilarius/MovieDB_API#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9"
   }
 }
