@@ -12,17 +12,13 @@ app.use(express.static('./public'))
 const morgan = require('morgan')
 app.use(morgan('short'))
 
-const router = require('./routes/movie.js')
-app.use(router)
+//  Connect all our routes to our application
+const routes = require('./routes');
+app.use('/', routes);
 
-
-
-app.get('/', (req, res) => {
-    console.log('Responding to root route')
-    res.send('Hello from ROOOOT')
-})
 
 // localhost:3000
-app.listen(3000, () => {
-    console.log('Server is up on Port 3000...')
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log('Server is up on Port ' + PORT)
 })

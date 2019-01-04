@@ -2,10 +2,8 @@ const express = require('express')
 const mysql = require('mysql')
 
 const router = express.Router()
-router.get('/messages', (req, res) => {
-    res.end()
-})
 
+// a pool create not every time a new connection
 const pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
